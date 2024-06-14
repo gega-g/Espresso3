@@ -35,7 +35,7 @@ class GreetingTests {
     @Test
     fun customClicksTest() {
         with(LandingPageSteps) {
-//            clickOnToolbar(110, 250) ვერვაჭერ იმ ღილაკს მენიუ რამაც უნდა გახსნას, ხელით გახსნისას მუშოაბს ტესტი
+//            clickOnToolbar(110, 250)
             navigateToCustomClicks()
         }
         with(CustomClicksSteps) {
