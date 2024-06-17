@@ -12,15 +12,18 @@ import org.junit.Assert
 
 object ChatSteps {
 
-    fun assertChatIsOpen(friend: String) {
+    fun assertChatIsOpen(friend: String): ChatSteps {
         Assert.assertEquals(title.getText(), friend)
         Assert.assertTrue(sendButton.isViewDisplayed())
+        return this
     }
-    fun writeMessageForFriend(text: String) {
+    fun writeMessageForFriend(text: String): ChatSteps {
         inputTextField.typeText(text)
+        return this
     }
-    fun sendMessage() {
+    fun sendMessage(): ChatSteps {
         sendButton.tap()
+        return this
     }
     fun assertMessageHasBeenSent(text: String) {
         Assert.assertTrue(sentMessage(text).isViewDisplayed())
